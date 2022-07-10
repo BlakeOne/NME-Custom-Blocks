@@ -1,6 +1,6 @@
 {
   "name": "AddTranslationToMatrix",
-  "comments": "Add the translation to the matrix.",
+  "comments": "Add the translation to the transform matrix.",
   "target": "Neutral",
   "inParameters": [
     {
