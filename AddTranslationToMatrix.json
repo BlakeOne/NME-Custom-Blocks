@@ -1,0 +1,27 @@
+{
+  "name": "AddTranslationToMatrix",
+  "comments": "Add the translation to the matrix.",
+  "target": "Neutral",
+  "inParameters": [
+    {
+      "name": "matrix",
+      "type": "Matrix"
+    },
+    {
+      "name": "translation",
+      "type": "Vector3"
+    }
+  ],
+  "outParameters": [
+    {
+      "name": "output",
+      "type": "Matrix"
+    }
+  ],
+  "functionName": "addTranslationToMatrix",
+  "code": [
+    "void addTranslationToMatrix(mat4 matrix, vec3 translation, out mat4 result) {",
+    "   result = mat4(matrix[0], matrix[1], matrix[2], matrix[3] + vec4(translation, 0.0));",
+    "}"
+  ]
+}
