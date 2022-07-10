@@ -1,0 +1,57 @@
+{
+    "name": "IsInRange",
+    "comments": "Returns a value if the operand is within the range.",
+    "target": "Neutral",
+    "inParameters": [
+        {
+            "name": "value",
+            "type": "AutoDetect"
+        },
+        {
+            "name": "min",
+            "type": "AutoDetect"
+        },
+        {
+            "name": "max",
+            "type": "AutoDetect"
+        },
+        {
+            "name": "true",
+            "type": "AutoDetect"
+        },
+        {
+            "name": "false",
+            "type": "AutoDetect"
+        }
+    ],
+    "outParameters": [
+        {
+            "name": "output",
+            "type": "BasedOnInput",
+            "typeFromInput": "true"
+        }
+    ],
+    "inLinkedConnectionTypes" : [
+        {
+            "input1": "value",
+            "input2": "min",
+            "looseCoupling": false
+        },
+        {
+            "input1": "value",
+            "input2": "max",
+            "looseCoupling": false
+        },
+        {
+            "input1": "true",
+            "input2": "false",
+            "looseCoupling": false
+        }
+    ],
+    "functionName": "isInRange{TYPE_value}",
+    "code": [
+        "void isInRange{TYPE_value}({TYPE_value} value, {TYPE_min} min, {TYPE_max} max, {TYPE_true} trueValue, {TYPE_false} falseValue, out {TYPE_output} result) {",
+        "   result = (value >= min && value <= max)? trueValue : falseValue;",
+        "}"
+    ]
+}

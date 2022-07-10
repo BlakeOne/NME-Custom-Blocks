@@ -1,0 +1,24 @@
+{
+  "name": "OneMinus",
+  "comments": "Subtract the input from 1.0.",
+  "target": "Neutral",
+  "inParameters": [
+    {
+      "name": "value",
+      "type": "AutoDetect"
+    }
+  ],
+  "outParameters": [
+    {
+      "name": "output",
+      "type": "BasedOnInput",
+      "typeFromInput": "value"
+    }
+  ],
+  "functionName": "oneMinus_{TYPE_value}",
+  "code": [
+    "void oneMinus_{TYPE_value}({TYPE_value} value, out {TYPE_output} result) {",
+    "   result = 1.0 - value;",
+    "}"
+  ]
+}

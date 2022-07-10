@@ -1,0 +1,52 @@
+{
+  "name": "IsEqualWithEpsilon",
+  "comments": "Returns a value if the operands are equal within the epsilon.",
+  "target": "Neutral",
+  "inParameters": [
+    {
+      "name": "left",
+      "type": "AutoDetect"
+    },
+    {
+      "name": "right",
+      "type": "AutoDetect"
+    },
+    {
+      "name": "epsilon",
+      "type": "Float"
+    },
+    {
+      "name": "true",
+      "type": "AutoDetect"
+    },
+    {
+      "name": "false",
+      "type": "AutoDetect"
+    }
+  ],
+  "outParameters": [
+    {
+      "name": "output",
+      "type": "BasedOnInput",
+      "typeFromInput": "true"
+    }
+  ],
+  "inLinkedConnectionTypes" : [
+    {
+      "input1": "left",
+      "input2": "right",
+      "looseCoupling": false
+    },
+    {
+      "input1": "true",
+      "input2": "false",
+      "looseCoupling": false
+    }
+  ],
+  "functionName": "isEqualWithEpsilon{TYPE_left}",
+  "code": [
+    "void isEqualWithEpsilon{TYPE_left}({TYPE_left} left, {TYPE_right} right, float epsilon, {TYPE_true} trueValue, {TYPE_false} falseValue, out {TYPE_output} result) {",
+    "   result = distance(left, right) <= epsilon? trueValue : falseValue;",
+    "}"
+  ]
+}
