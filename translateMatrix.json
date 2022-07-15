@@ -1,6 +1,6 @@
 {
-  "name": "AddTranslationToMatrix",
-  "comments": "Add the translation to the transform matrix.",
+  "name": "TranslateMatrix",
+  "comments": "Translate the transform matrix.",
   "target": "Neutral",
   "inParameters": [
     {
@@ -18,9 +18,9 @@
       "type": "Matrix"
     }
   ],
-  "functionName": "addTranslationToMatrix",
+  "functionName": "translateMatrix",
   "code": [
-    "void addTranslationToMatrix(mat4 matrix, vec3 translation, out mat4 result) {",
+    "void translateMatrix(mat4 matrix, vec3 translation, out mat4 result) {",
     "   result = mat4(matrix[0], matrix[1], matrix[2], matrix[3] + vec4(translation, 0.0));",
     "}"
   ]
