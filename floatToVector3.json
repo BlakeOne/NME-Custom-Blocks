@@ -1,0 +1,23 @@
+{
+  "name": "FloatToVector3",
+  "comments": "Create a vector from a scalar input value.",
+  "target": "Neutral",
+  "inParameters": [
+    {
+      "name": "value",
+      "type": "Float"
+    }
+  ],
+  "outParameters": [
+    {
+      "name": "output",
+      "type": "Vector3"
+    }
+  ],
+  "functionName": "floatToVector3",
+  "code": [
+    "void floatToVector3(float value, out vec3 result) {",
+    "   result = vec3(value);",
+    "}"
+  ]
+}
